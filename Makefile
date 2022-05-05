@@ -462,7 +462,7 @@ test-e2e-upgrade-caph: $(E2E_CONF_FILE) $(if $(SKIP_IMAGE_BUILD),,e2e-image) $(A
 
 .PHONY: test-e2e-upgrade-kubernetes
 test-e2e-upgrade-kubernetes: $(if $(SKIP_IMAGE_BUILD),,e2e-image) $(ARTIFACTS)
-	GINKO_FOKUS="'\[Upgrade Kubernetes\]'" GINKO_NODES=2 PACKER_KUBERNETES_UPGRADE_FROM=templates/node-image/1.23.4-ubuntu-20-04-containerd PACKER_KUBERNETES_UPGRADE_TO=templates/node-image/1.23.6-ubuntu-20-04-containerd ./hack/ci-e2e-capi.sh
+	GINKO_FOKUS="'\[Upgrade Kubernetes\]'" GINKO_NODES=2 PACKER_KUBERNETES_UPGRADE_FROM=templates/node-image/1.23.6-ubuntu-20-04-containerd PACKER_KUBERNETES_UPGRADE_TO=templates/node-image/1.24.0-ubuntu-20-04-containerd ./hack/ci-e2e-capi.sh
 
 .PHONY: test-e2e-conformance
 test-e2e-conformance: $(E2E_CONF_FILE) $(if $(SKIP_IMAGE_BUILD),,e2e-image) $(ARTIFACTS)
