@@ -17,7 +17,7 @@ require (
 	golang.org/x/mod v0.6.0-dev.0.20220106191415-9b9b3d81d5e3
 	k8s.io/api v0.24.0
 	k8s.io/apimachinery v0.24.0
-	k8s.io/apiserver v0.23.6
+	k8s.io/apiserver v0.24.0
 	k8s.io/client-go v0.24.0
 	k8s.io/klog/v2 v2.60.1
 	k8s.io/kubectl v0.24.0
@@ -25,7 +25,7 @@ require (
 	sigs.k8s.io/cluster-api v1.1.3
 	sigs.k8s.io/cluster-api/test v1.1.3
 	sigs.k8s.io/controller-runtime v0.11.2
-	sigs.k8s.io/kind v0.12.0
+	sigs.k8s.io/kind v0.13.0
 )
 
 require (
@@ -36,7 +36,7 @@ require (
 	github.com/Azure/go-autorest/autorest/date v0.3.0 // indirect
 	github.com/Azure/go-autorest/logger v0.2.1 // indirect
 	github.com/Azure/go-autorest/tracing v0.6.0 // indirect
-	github.com/BurntSushi/toml v0.4.1 // indirect
+	github.com/BurntSushi/toml v1.0.0 // indirect
 	github.com/MakeNowJust/heredoc v1.0.0 // indirect
 	github.com/Microsoft/go-winio v0.5.0 // indirect
 	github.com/PuerkitoBio/purell v1.1.1 // indirect
