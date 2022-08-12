@@ -62,10 +62,13 @@ runs:
     - name: HCLOUD_TOKEN
       env:
         TTS_TOKEN: ${{ inputs.e2e_tts_token }}
+        TTS_TOKEN: ${{ inputs.e2e_hcloud_token }}
       shell: bash
       run: |
         set -ueo pipefail
-        if [[ "${TTS_TOKEN:-}" != "" ]]; then
+        if [[ "${HCLOUD_TOKEN:-}" != "" ]]; then
+          echo "HCLOUD_TOKEN=$HCLOUD_TOKEN" >> "$GITHUB_ENV"
+        elif [[ "${TTS_TOKEN:-}" != "" ]]; then
                   token="$(./hack/ci-e2e-get-token.sh)"
                   echo "::add-mask::$token"
                   echo "HCLOUD_TOKEN=$token" >> "$GITHUB_ENV"

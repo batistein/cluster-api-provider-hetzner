@@ -61,6 +61,7 @@ jobs:
           e2e_make_target: test-e2e
           e2e_quay_username: ${{ secrets.QUAY_USERNAME }}
           e2e_tts_token: ${{ secrets.TTS_TOKEN }}
+          e2e_hcloud_token: ${{ secrets.HCLOUD_TOKEN }}
 
   e2e-hetzner-basic:
     name: Test Hetzner Basic
@@ -80,6 +81,7 @@ jobs:
           e2e_make_target: test-e2e-baremetal
           e2e_quay_username: ${{ secrets.QUAY_USERNAME }}
           e2e_tts_token: ${{ secrets.TTS_TOKEN }}
+          e2e_hcloud_token: ${{ secrets.HCLOUD_TOKEN }}
           e2e_robot_user: ${{ secrets.HETZNER_ROBOT_USER }}
           e2e_robot_password: ${{ secrets.HETZNER_ROBOT_PASSWORD }}
           e2e_ssh_pub: ${{ secrets.HETZNER_SSH_PUB }}
