@@ -1,0 +1,10 @@
+{
+    "packageRules": [
+      {
+        "matchUpdateTypes": ["major"],
+        "matchManagers": ["gomod"],
+        "description": "Ask for approval for golang major updates",
+        "dependencyDashboardApproval": true
+      }
+    ]
+  }
