@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "config:base",
+    "docker:enableMajor",
+    ":disableRateLimiting",
+    ":dependencyDashboard",
+    ":semanticCommits",
+    "group:monorepos",
+    "group:recommended",
+    "github>whitesource/merge-confidence:beta",
+    "github>batistein/cluster-api-provider-hetzner//.github/renovate/approval.json5",
+    "github>batistein/cluster-api-provider-hetzner//.github/renovate/autoMerge.json5",
+    "github>batistein/cluster-api-provider-hetzner//.github/renovate/commitMessage.json5",
+    "github>batistein/cluster-api-provider-hetzner//.github/renovate/golang.json5",
+    "github>batistein/cluster-api-provider-hetzner//.github/renovate/labels.json5",
+    "github>batistein/cluster-api-provider-hetzner//.github/renovate/regexManagers.json5"
+  ],
+  "platform": "github",
+  "onboarding": false,
+  "requireConfig": "optional",
+  "timezone": "Europe/Berlin",
+  // repo config
+  "repositories": ["batistein/cluster-api-provider-hetzner"],
+  "ignorePaths": [],
+  "username": "batistein-bot[bot]",
+  "gitAuthor": "batistein-bot[bot] <115922034+batistein-bot[bot]@users.noreply.github.com>",
+  // PR config
+  "dependencyDashboardTitle": "Dependency Dashboard 🤖",
+  "dependencyDashboardHeader": "",
+  "prFooter": "",
+  "suppressNotifications": ["prIgnoreNotification"],
+  "rebaseWhen": "conflicted",
+  "commitBodyTable": true,
+  "includeForks": true,
+  // "prHourlyLimit": 1, enable later becuase only one e2e test can run at a time
+}
